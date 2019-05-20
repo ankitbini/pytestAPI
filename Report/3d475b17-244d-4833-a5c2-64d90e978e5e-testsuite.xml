@@ -1,0 +1,71 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1558262191936" stop="1558262193284">
+  <name>test_AddStudent</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1558262191936" status="passed" stop="1558262192149">
+      <name>test_addNewStudent</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="21336-MainThread"/>
+        <label name="host" value="BANPF102BG9"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1558262192151" status="failed" stop="1558262192911">
+      <name>test_getStudentDetails</name>
+      <failure>
+        <message>TypeError: 'bool' object is not subscriptable</message>
+        <stack-trace>def test_getStudentDetails():
+        API_URL = "http://thetestingworldapi.com/api/studentsDetails/5340"
+        response = requests.get(API_URL)
+        # result = json.loads(response.text)
+        result = response.json()
+        id = jsonpath.jsonpath(result, 'data.id')
+&gt;       assert id[0] == 5340
+E       TypeError: 'bool' object is not subscriptable
+
+test_AddStudent.py:20: TypeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="21336-MainThread"/>
+        <label name="host" value="BANPF102BG9"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1558262192915" status="passed" stop="1558262193099">
+      <name>test_updateStudent</name>
+      <attachments>
+        <attachment source="cdd879cd-a21b-4fe9-82e1-2a05a20218be-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="21336-MainThread"/>
+        <label name="host" value="BANPF102BG9"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1558262193103" status="passed" stop="1558262193284">
+      <name>test_deleteUser</name>
+      <attachments>
+        <attachment source="36f35787-b7fc-4a56-b1f1-0fbc7e5b2eac-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="21336-MainThread"/>
+        <label name="host" value="BANPF102BG9"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
